@@ -18,10 +18,14 @@
 //  return await UserActivation.create(data);
 // };
 
+
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
 const mongoose = require("mongoose");
 
 
-mongoose.connect("mongodb+srv://anishde85_db_user:urIgAYFfMoSbWMzT@cluster0.sojxiny.mongodb.net/");
+mongoose.connect("mongodb+srv://rakhi57776_db_user:YOUR_PASSWORD@cluster0.sojxiny.mongodb.net/");
 
 // async function saveUser(){
 
@@ -63,9 +67,9 @@ async function saveStudent(){
   )
 
   await Student.create({
-   name:"Anish",
+   name:"Tanish Kumar",
    id:12345,
-   age:24
+   age:22
   })
   //
   await Student.find({
